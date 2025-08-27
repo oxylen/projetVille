@@ -1,5 +1,5 @@
 {
-    "name": "SendriAska/projetVille",
+    "name": "sendriaska/projetville",
     "type": "project",
     "autoload": {
         "psr-4": {
