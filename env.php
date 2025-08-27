@@ -1,7 +1,7 @@
 <?php
 
-const BDD_LOGIN = "";
-const BDD_PASSWORD = "";
-const BDD_SERVER = "";
-const BDD_NAME = "";
-const BASE_URL = "";
+const BDD_LOGIN = "root";
+const BDD_PASSWORD = "root";
+const BDD_SERVER = "localhost";
+const BDD_NAME = "peisey";
+const BASE_URL = "/peisey";
