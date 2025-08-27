@@ -99,4 +99,30 @@ class Event
     }
 
     //Methodes
+    public function saveEvent(): void
+    {
+        try 
+        {
+            $title = $this->title;
+            $description = $this->description;
+            $dateStart = $this->dateStart;
+            $dateEnd = $this->dateEnd;
+            $location = $this->location;
+            $img = $this->img;
+            $remainingPlaces = $this->remainingPlaces;
+
+            $request = "INSERT INTO event(title, description, date_start, date_end, location, img, remaining_places) VALUES (?,?,?,?,?,?,?)";
+            $req = $this->bdd->prepare($request);
+            $req->bindParam(1, $title, \PDO::PARAM_STR);
+            $req->bindParam(2, $description, \PDO::PARAM_STR);
+            $req->bindParam(3, $dateStart, \PDO::PARAM_STR);
+            $req->bindParam(4, $dateEnd, \PDO::PARAM_STR);
+            $req->bindParam(5, $location, \PDO::PARAM_STR);
+            $req->bindParam(6, $img, \PDO::PARAM_STR);
+            $req->bindParam(7, $remainingPlaces, \PDO::PARAM_INT);
+            $req->execute();
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }
