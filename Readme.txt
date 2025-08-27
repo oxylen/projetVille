@@ -9,3 +9,14 @@ const BASE_URL = "";
 
 Ouvrir le Terminal Bash et ecrire : 
 composer install
+
+Dans .gitignore : 
+utils/
+/vendor/
+composer.lock
+/public/image/*.*
+env.php
+
+Créer dossier Utils avec : 
+Database.php
+Utilitaire.php
