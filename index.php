@@ -21,6 +21,10 @@ switch (substr($path, strlen(BASE_URL))) {
     case "/":
         $homeController->home();
         break;
-    case "/user/inscription":
+    case "/user/connexion":
+        $userController->login();
+        break;
+    default : 
+        echo "404";
         break;
 }
