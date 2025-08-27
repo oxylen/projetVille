@@ -10,6 +10,7 @@
         <?php include "App/View/components/header.php";?>
     </header>
     <main>
+        <h1>Bienvenue</h1>
         <article></article>
         <article></article>
         <article></article>

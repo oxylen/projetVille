@@ -81,7 +81,7 @@ class User
     public function findUserByEmail() {
         try {
             $email = $this->email;
-            $request = "SELECT * FROM users WHERE email = ?";
+            $request = "SELECT * FROM user WHERE email = ?";
             $req = $this->bdd->prepare($request);
             $req->bindParam(1, $email, \PDO::PARAM_STR);
             $req->execute();

@@ -12,9 +12,11 @@ session_start();
 
 // import des classes router
 use App\Controller\HomeController;
+use App\Controller\UserController;
 
 // instanciation du contrôleur
 $homeController = new HomeController();
+$userController = new UserController();
 
 // Test route
 switch (substr($path, strlen(BASE_URL))) {
